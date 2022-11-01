@@ -1,0 +1,41 @@
+#contenido{
+    background-color:rgb(222, 243, 202);
+    height: 90vh;
+}
+
+.cont-matriz{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2px;
+    width: 48%;
+    font-size: 3em;
+    text-align: center;
+    /*background-color: rgb(228, 160, 160);*/
+    margin-left: 1.4%;
+}
+
+/*
+.cont-der{
+    margin-left: 3%;
+}
+*/
+.caja{
+    background-color: bisque;
+    min-height: 10vh;
+    padding-top: 20%;
+    color: brown;
+    font-size: 0.7em;
+    border: solid 1px brown;
+}
+
+.menu{
+    padding: 25px; 
+}
+
+#opciones{
+    color: white;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(199, 121, 36);
+    font-size: 1.5em;
+}
