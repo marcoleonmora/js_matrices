@@ -37,13 +37,13 @@ function ejecutarOpcion() {
          mostrarSuperDer();
          break;
       case "6":
-
+         mostrarSuperIzq();
          break;
       case "7":
-
+         mostrarInfIzq();
          break;
       case "8":
-
+         mostrarInfDer();
          break;
  
       default:
@@ -98,7 +98,6 @@ function mostrarDiagPpal() {
    }      
 }
 
-
 function mostrarDiagInv() {
    for (let f = 0; f < matriz.length; f++) {
       let c = matriz.length-1-f;
@@ -108,11 +107,43 @@ function mostrarDiagInv() {
 }
 
 function mostrarSuperDer() {
-   
+   for (let f = 0; f < matriz.length; f++) {
+      for (let c = f; c < matriz.length; c++) {
+         let nombre = 'd-f' + f + 'c' + c;
+         document.getElementById(nombre).innerText = matriz[f][c];
+      }
+   }   
+}
+
+function mostrarSuperIzq() {
+   for (let f = 0; f < matriz.length; f++) {
+      for (let c = 0; c < matriz.length-f; c++) {
+         let nombre = 'd-f' + f + 'c' + c;
+         document.getElementById(nombre).innerText = matriz[f][c];
+    
+      }
+   }   
 }
 
 
+function mostrarInfIzq() {
+   for (let f = 0; f < matriz.length; f++) {
+      for (let c = 0; c <= f; c++) {
+         let nombre = 'd-f' + f + 'c' + c;
+         document.getElementById(nombre).innerText = matriz[f][c];
+      }
+   }   
+}
 
+
+function mostrarInfDer() {
+   for (let f = 0; f < matriz.length; f++) {
+      for (let c = matriz.length-f-1; c < matriz.length; c++) {
+         let nombre = 'd-f' + f + 'c' + c;
+         document.getElementById(nombre).innerText = matriz[f][c];
+      }
+   }   
+}
 
 /**
  * Genera un numero entre min y max
